@@ -124,7 +124,7 @@ main() {
       $WASMCC $WASMCCFLAGS $ELFCONV_MACROS $ELFCONV_DEBUG_MACROS -o VmIntrinsics.wasm.o -c ${RUNTIME_DIR}/VmIntrinsics.cpp && \
       $WASMCC $WASMCCFLAGS $ELFCONV_MACROS $ELFCONV_DEBUG_MACROS -o Util.wasm.o -c ${UTILS_DIR}/Util.cpp && \
       $WASMCC $WASMCCFLAGS $ELFCONV_MACROS $ELFCONV_DEBUG_MACROS -o elfconv.wasm.o -c ${UTILS_DIR}/elfconv.cpp && \
-      $WASMCC -c lift.ll -o lift.wasm.o
+      $WASMCC -O3 -c lift.ll -o lift.wasm.o
       $WASMCC -o exe.wasm lift.wasm.o Entry.wasm.o Memory.wasm.o Syscall.wasm.o VmIntrinsics.wasm.o Util.wasm.o elfconv.wasm.o
       echo -e "[\033[32mINFO\033[0m] Generate WASM binary."
       # delete obj
