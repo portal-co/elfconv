@@ -1,3 +1,6 @@
 [submodule "examples/mnist-neural-network-plain-c"]
 	path = examples/mnist-neural-network-plain-c
 	url = https://github.com/AndrewCarterUK/mnist-neural-network-plain-c
+[submodule "examples/sqlite"]
+	path = examples/sqlite
+	url = https://github.com/sqlite/sqlite
